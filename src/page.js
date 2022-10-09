@@ -1,117 +1,135 @@
 import './App.css';
 import { useEffect, useState} from 'react';
-import { Divider, Breadcrumb } from 'antd';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import BackPage from './page/backpage';
+import LegPage from './page/legpage'
+import ShoulderPage from './page/shoulderpage';
+import ChestPage from './page/chestpage';
+import ArmPage from './page/armpage'
+import CorePage from './page/corepage'
+import {API_URL} from './config/index'
 
 
 function Page() {
 
-  const [cid,setCid]= useState('1')
+  const navigate = useNavigate();
+  const [cid,setCid]= useState(null)
   const [customer,setCustomer]= useState([])
+ 
 
-  const url = `http://localhost:1337/api/customers/${cid}`
-  const url2 = `http://localhost:1337/api/customers/${cid}?populate=legs`
-  const url3 = `http://localhost:1337/api/customers/`
+  const url = `${API_URL}/api/customers/${cid}`
+  const url2 = `${API_URL}/api/customers/`
+  const url3 = `${API_URL}/api/customers?populate=%2A`
+
   const [name,setName]= useState({
       attributes:{
         name:""
       }
   })
 
-  const [exe,setExe]= useState({
-    attributes:{
-      name:"",
-      legs:{
-        exe1:''
-      }
-    }
-})
   
   useEffect(() => {
+
+
     async function fetchMyAPI() {
+      
+
     let res = await fetch(url)
     res = await res.json()
     setName(res.data)
+    
 
-  
-      let res2 = await fetch(url2)
-      res2 = await res2.json()
-      setExe(res2.data)    
+  {/* customer api */}   
+      let res1 = await fetch(url2)
+      res1 = await res1.json()
+      setCustomer(res1.data)
       
-      let res3 = await fetch(url3)
-      res3 = await res3.json()
-      setCustomer(res3.data)  
-     
-  
+  console.log(cid)
   }
     fetchMyAPI()
-  }, [url])
+  }, [url,setCid])
 
     
   function handleCustomer(e){
     e.preventDefault();
     const newcustomer=[e.target.id]=e.target.value
     setCid(newcustomer)
-     // console.log(setCid)
+     console.log(setCid)
   }
   
+  function submit(e){
+    e.preventDefault();
+    axios.delete(url,{
+      data:{
+        id:cid
+      }
+    })  .then(res=>{
+      console.log(res.data)
+      navigate("/");
+      })
+
+  }
 
 
  
   return(
-    <div className='pageBody' >
 
-<div style={{marginBottom:'10%'}}>
-  <form >
-    <label style={{paddingRight:'2%',fontSize:'18px'}} >Choose a customer:</label>
-    <select id="dropdownDefault" data-dropdown-toggle="dropdown" className="text-white bg-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" name="customers" value={customer.id} onChange={handleCustomer}>
+    <>
 
     
+
+    <div className='pageBody' >
+
+
+<div >
+  <form >
+    <label style={{paddingRight:'2%',fontSize:'18px'}} >Choose a customer:</label>
+    <select id="dropdownDefault" data-dropdown-toggle="dropdown" className="text-white bg-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" name="customers" 
+    value={customer.id} onChange={handleCustomer}>
+
+    <option >--- SELECT --- </option>
     {customer.map(customers=>(
 
+ 
       <option  key={customers.id} id="iduser" value={customers.id}> 
   {customers.attributes.name} ID:{customers.id}
       </option>
-   
-  
+
   ))} 
-  
-   </select>
+
+   </select> <button type="button" onClick={submit}
+   style={{ marginInline: "2%"}}
+   className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800" 
+  >Delete</button>
    </form>
+  
+    
   </div>
 
-    <h3> {name.attributes.name} - ID:{cid}</h3>
-    <Divider orientation="right"><h3>Moday - Legs</h3></Divider>
+  {cid != null ?  
   
+  <div>
 
-       {/* exe 1. */}
-       {exe.attributes.legs.exe1 ?   
-       <div>  
-          <Breadcrumb>
-   <Breadcrumb.Item><a> {exe.attributes.legs.exe1}</a></Breadcrumb.Item>
-   <Breadcrumb.Item>sets:{exe.attributes.legs.sets1}</Breadcrumb.Item>
-   <Breadcrumb.Item>reps: {exe.attributes.legs.reps1}</Breadcrumb.Item>
-   <Breadcrumb.Item>weight: {exe.attributes.legs.weight1}</Breadcrumb.Item>
-   </Breadcrumb>
-       </div>
-       : ''}
-
-        {/* exe 2. */}
-          
-      {exe.attributes.legs.exe2 ? 
-       <div>
-     <Divider/>
-     <Breadcrumb>
-   <Breadcrumb.Item><a> {exe.attributes.legs.exe2}</a></Breadcrumb.Item>
-   <Breadcrumb.Item>sets:{exe.attributes.legs.sets2}</Breadcrumb.Item>
-   <Breadcrumb.Item>reps: {exe.attributes.legs.reps2}</Breadcrumb.Item>
-   <Breadcrumb.Item>weight: {exe.attributes.legs.weight2}</Breadcrumb.Item>
-   </Breadcrumb>
-           </div>
-      : ''}
-
- 
-   
+  <LegPage cid={cid} />
+    <BackPage cid={cid} />
+    <ShoulderPage cid={cid} />
+    <ChestPage cid={cid} />
+    <ArmPage cid={cid} />
+    <CorePage cid={cid} />
     </div>
+
+ : <h1 className='menu_font'>SELECT THE CUSTOMER</h1>
+
+
+     }
+   
+
+   
+</div>
+
+    </>
+
   );
 
 }
