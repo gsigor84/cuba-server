@@ -61,7 +61,9 @@ body {
   font-weight: bold;
   font-family: 'Unica One', cursive;
   color: #1A56DB;
-
+}
+li {
+  display: inline;
 }
 .menu_div{
   margin-right: 10%;

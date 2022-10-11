@@ -60,7 +60,7 @@ function Edit() {
 
   return(
     <>
-{cid}
+
  <form >
     <label style={{paddingRight:'2%',fontSize:'18px'}} >Choose a customer:</label>
     <select id="dropdownDefault" data-dropdown-toggle="dropdown" className="text-white bg-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" name="customers" 
