@@ -10,6 +10,9 @@ body {
 .page_font{
   font-size: 14px;
 }
+.logo{
+  width: 150px;
+}
 .header{
   position:relative;
   overflow:hidden;
@@ -127,6 +130,9 @@ padding-top: 10px;
     margin-top: 5%;
     width: 90%;
     padding: 10px;
+  }
+  .logo{
+    width: 50px;
   }
   .header{
 

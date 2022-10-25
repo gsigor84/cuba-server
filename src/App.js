@@ -5,7 +5,7 @@ import Edit from './edit';
 import Cardio from './cardio'
 import Slug from './slug';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import { Card, Space } from 'antd';
+import {Space } from 'antd';
 import Header from './header'
 
 
