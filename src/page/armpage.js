@@ -308,10 +308,10 @@ const [a6,setA6]= useState('')
        <div>  
           <Divider/>
           <Breadcrumb>
-   <Breadcrumb.Item><a href={a1}  target="_blank">{exe.attributes[muscle].exe1}</a></Breadcrumb.Item>
-   <Breadcrumb.Item>sets:{exe.attributes[muscle].sets1}</Breadcrumb.Item>
-   <Breadcrumb.Item>reps: {exe.attributes[muscle].reps1}</Breadcrumb.Item>
-   <Breadcrumb.Item>weight: {exe.attributes[muscle].weight1}</Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'><a href={a1}  target="_blank">{exe.attributes[muscle].exe1}</a></span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>sets:{exe.attributes[muscle].sets1}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>reps: {exe.attributes[muscle].reps1}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>weight: {exe.attributes[muscle].weight1}</span> </Breadcrumb.Item>
    </Breadcrumb>
        </div>
        : ''}
@@ -322,10 +322,10 @@ const [a6,setA6]= useState('')
        <div>
      <Divider/>
      <Breadcrumb>
-   <Breadcrumb.Item><a href={a2}  target="_blank"> {exe.attributes[muscle].exe2}</a></Breadcrumb.Item>
-   <Breadcrumb.Item>sets:{exe.attributes[muscle].sets2}</Breadcrumb.Item>
-   <Breadcrumb.Item>reps: {exe.attributes[muscle].reps2}</Breadcrumb.Item>
-   <Breadcrumb.Item>weight: {exe.attributes[muscle].weight2}</Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'><a href={a2}  target="_blank"> {exe.attributes[muscle].exe2}</a></span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>sets:{exe.attributes[muscle].sets2}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>reps: {exe.attributes[muscle].reps2}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>weight: {exe.attributes[muscle].weight2}</span> </Breadcrumb.Item>
    </Breadcrumb>
            </div>
       : ''}
@@ -335,10 +335,10 @@ const [a6,setA6]= useState('')
        <div>
      <Divider/>
      <Breadcrumb>
-   <Breadcrumb.Item><a href={a3}  target="_blank"> {exe.attributes[muscle].exe3}</a></Breadcrumb.Item>
-   <Breadcrumb.Item>sets:{exe.attributes[muscle].sets3}</Breadcrumb.Item>
-   <Breadcrumb.Item>reps: {exe.attributes[muscle].reps3}</Breadcrumb.Item>
-   <Breadcrumb.Item>weight: {exe.attributes[muscle].weight3}</Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'><a href={a3}  target="_blank"> {exe.attributes[muscle].exe3}</a></span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>sets:{exe.attributes[muscle].sets3}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>reps: {exe.attributes[muscle].reps3}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>weight: {exe.attributes[muscle].weight3}</span> </Breadcrumb.Item>
    </Breadcrumb>
            </div>
       : ''}
@@ -347,10 +347,10 @@ const [a6,setA6]= useState('')
        <div>
      <Divider/>
      <Breadcrumb>
-   <Breadcrumb.Item><a href={a4}  target="_blank"> {exe.attributes[muscle].exe4}</a></Breadcrumb.Item>
-   <Breadcrumb.Item>sets:{exe.attributes[muscle].sets4}</Breadcrumb.Item>
-   <Breadcrumb.Item>reps: {exe.attributes[muscle].reps4}</Breadcrumb.Item>
-   <Breadcrumb.Item>weight: {exe.attributes[muscle].weight4}</Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'><a href={a4}  target="_blank"> {exe.attributes[muscle].exe4}</a></span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>sets:{exe.attributes[muscle].sets4}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>reps: {exe.attributes[muscle].reps4}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>weight: {exe.attributes[muscle].weight4}</span> </Breadcrumb.Item>
    </Breadcrumb>
            </div>
       : ''}
@@ -360,10 +360,9 @@ const [a6,setA6]= useState('')
        <div>
      <Divider/>
      <Breadcrumb>
-   <Breadcrumb.Item><a href={a5}  target="_blank"> {exe.attributes[muscle].exe5}</a></Breadcrumb.Item>
-   <Breadcrumb.Item>sets:{exe.attributes[muscle].sets5}</Breadcrumb.Item>
-   <Breadcrumb.Item>reps: {exe.attributes[muscle].reps5}</Breadcrumb.Item>
-   <Breadcrumb.Item>weight: {exe.attributes[muscle].weight5}</Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'><a href={a5}  target="_blank"> {exe.attributes[muscle].exe5}</a></span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>sets:{exe.attributes[muscle].sets5}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>reps: {exe.attributes[muscle].reps5}</span> </Breadcrumb.Item>
    </Breadcrumb>
            </div>
       : ''}
@@ -371,10 +370,10 @@ const [a6,setA6]= useState('')
        <div>
      <Divider/>
      <Breadcrumb>
-   <Breadcrumb.Item><a href={a6}  target="_blank"> {exe.attributes[muscle].exe6}</a></Breadcrumb.Item>
-   <Breadcrumb.Item>sets:{exe.attributes[muscle].sets6}</Breadcrumb.Item>
-   <Breadcrumb.Item>reps: {exe.attributes[muscle].reps6}</Breadcrumb.Item>
-   <Breadcrumb.Item>weight: {exe.attributes[muscle].weight6}</Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'><a href={a6}  target="_blank"> {exe.attributes[muscle].exe6}</a></span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>sets:{exe.attributes[muscle].sets6}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>reps: {exe.attributes[muscle].reps6}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>weight: {exe.attributes[muscle].weight6}</span> </Breadcrumb.Item>
    </Breadcrumb>
            </div>
       : ''}

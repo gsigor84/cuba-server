@@ -247,10 +247,10 @@ s_barrell_press:{
        {exe.attributes[muscle].exe1 ?   
        <div>  
           <Breadcrumb>
-   <Breadcrumb.Item><a  href={s1}  target="_blank"> {exe.attributes[muscle].exe1}</a></Breadcrumb.Item>
-   <Breadcrumb.Item>sets:{exe.attributes[muscle].sets1}</Breadcrumb.Item>
-   <Breadcrumb.Item>reps: {exe.attributes[muscle].reps1}</Breadcrumb.Item>
-   <Breadcrumb.Item>weight: {exe.attributes[muscle].weight1}</Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'><a  href={s1}  target="_blank"> {exe.attributes[muscle].exe1}</a></span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>sets:{exe.attributes[muscle].sets1}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>reps: {exe.attributes[muscle].reps1}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>weight: {exe.attributes[muscle].weight1}</span> </Breadcrumb.Item>
    </Breadcrumb>
        </div>
        : ''}
@@ -261,10 +261,10 @@ s_barrell_press:{
        <div>
      <Divider/>
      <Breadcrumb>
-   <Breadcrumb.Item><a href={s2}  target="_blank"> {exe.attributes[muscle].exe2}</a></Breadcrumb.Item>
-   <Breadcrumb.Item>sets:{exe.attributes[muscle].sets2}</Breadcrumb.Item>
-   <Breadcrumb.Item>reps: {exe.attributes[muscle].reps2}</Breadcrumb.Item>
-   <Breadcrumb.Item>weight: {exe.attributes[muscle].weight2}</Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'><a href={s2}  target="_blank"> {exe.attributes[muscle].exe2}</a></span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>sets:{exe.attributes[muscle].sets2}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>reps: {exe.attributes[muscle].reps2}</span> </Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>weight: {exe.attributes[muscle].weight2}</span> </Breadcrumb.Item>
    </Breadcrumb>
            </div>
       : ''}
@@ -274,10 +274,10 @@ s_barrell_press:{
        <div>
      <Divider/>
      <Breadcrumb>
-   <Breadcrumb.Item><a href={s3}  target="_blank"> {exe.attributes[muscle].exe3}</a></Breadcrumb.Item>
-   <Breadcrumb.Item>sets:{exe.attributes[muscle].sets3}</Breadcrumb.Item>
-   <Breadcrumb.Item>reps: {exe.attributes[muscle].reps3}</Breadcrumb.Item>
-   <Breadcrumb.Item>weight: {exe.attributes[muscle].weight3}</Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'><a href={s3}  target="_blank"> {exe.attributes[muscle].exe3}</a></span></Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>sets:{exe.attributes[muscle].sets3}</span></Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>reps: {exe.attributes[muscle].reps3}</span></Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>weight: {exe.attributes[muscle].weight3}</span></Breadcrumb.Item>
    </Breadcrumb>
            </div>
       : ''}
@@ -286,10 +286,10 @@ s_barrell_press:{
        <div>
      <Divider/>
      <Breadcrumb>
-   <Breadcrumb.Item><a href={s4}  target="_blank"> {exe.attributes[muscle].exe4}</a></Breadcrumb.Item>
-   <Breadcrumb.Item>sets:{exe.attributes[muscle].sets4}</Breadcrumb.Item>
-   <Breadcrumb.Item>reps: {exe.attributes[muscle].reps4}</Breadcrumb.Item>
-   <Breadcrumb.Item>weight: {exe.attributes[muscle].weight4}</Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'><a href={s4}  target="_blank"> {exe.attributes[muscle].exe4}</a></span></Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>sets:{exe.attributes[muscle].sets4}</span></Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>reps: {exe.attributes[muscle].reps4}</span></Breadcrumb.Item>
+   <Breadcrumb.Item><span className='page_font'>weight: {exe.attributes[muscle].weight4}</span></Breadcrumb.Item>
    </Breadcrumb>
            </div>
       : ''}

@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import {Form, Input, Divider, message  } from 'antd';
 import {API_URL} from './config/index'
 
-
-
 function Add (){
 
 

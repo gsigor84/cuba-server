@@ -8,10 +8,13 @@ import ShoulderPage from './page/shoulderpage';
 import ChestPage from './page/chestpage';
 import ArmPage from './page/armpage'
 import CorePage from './page/corepage'
+import CardioPage from './page/cardiopage';
 import {API_URL} from './config/index'
 
 
 function Page() {
+
+
 
   const navigate = useNavigate();
   const [cid,setCid]= useState(null)
@@ -107,7 +110,7 @@ function Page() {
 <div >
   <form >
     <label style={{paddingRight:'2%',fontSize:'18px'}} >Choose a customer:</label>
-    <select id="dropdownDefault" data-dropdown-toggle="dropdown" className="text-white bg-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" name="customers" 
+    <select id="dropdownDefault" data-dropdown-toggle="dropdown" className="text-white font-sm rounded-lg text-sm px-3 text-center inline-flex items-center" style={{backgroundColor:'#214fc6',border: 'none'}}type="button" name="customers" 
     value={customer.id} onChange={handleCustomer}>
 
     <option >--- SELECT --- </option>
@@ -122,12 +125,12 @@ function Page() {
 
    </select>
    <button type="button" onClick={goto}
-   style={{ marginInline: "2%"}}
-   className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-green-800" 
+  
+   className="text-white focus:ring-4  font-medium rounded-lg text-sm px-4 py-2 mr-2 mb-2  focus:outline-none" style={{backgroundColor:'#1da19c',border: 'none',marginInline: "2%"}}
   >Go to</button>
    <button type="button" onClick={submit}
-   style={{ marginInline: "2%"}}
-   className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800" 
+   
+   className="text-white  font-medium rounded-lg text-sm px-4 py-2 mr-2 mb-2 focus:outline-none" style={{backgroundColor:'#ff4500',border: 'none',marginInline: "2%"}}
   >Delete</button>
    </form>
   
@@ -144,6 +147,7 @@ function Page() {
     <ChestPage cid={cid} />
     <ArmPage cid={cid} />
     <CorePage cid={cid} />
+    <CardioPage cid={cid} />
     </div>
 
  : <h1 className='menu_font'>SELECT THE CUSTOMER</h1>
