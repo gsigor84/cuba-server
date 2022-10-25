@@ -159,19 +159,19 @@ padding-top: 10px;
   }
   .icon{
     padding-top: 10px;
-      font-size: 12px;
+      font-size: 10px;
       
     }
     
   .menu_font{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     font-family: 'Unica One', cursive;
     color: #1A56DB;
   }
   
   .wrapper {
-    width: 200px;
+    width: 300px;
     
     overflow: hidden; /* will contain if #first is longer than #second */
   }
